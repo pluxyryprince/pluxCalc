@@ -21,9 +21,6 @@ namespace pluxCalc
         public int count;
         public double x;
 
-
-
-
         private void plus_Click(object sender, EventArgs e)//сложение
         {
             a = double.Parse(textBox1.Text);
@@ -153,43 +150,43 @@ namespace pluxCalc
             switch (count)
             {
                 case 1:
-                    b = a + double.Parse(textBox1.Text);
+                    b = a + double.Parse(textBox1.Text);//сложение
                     textBox1.Text = b.ToString();
                     break;
                 case 2:
-                    b = a - double.Parse(textBox1.Text);
+                    b = a - double.Parse(textBox1.Text);//вычитание
                     textBox1.Text = b.ToString();
                     break;
                 case 3:
-                    b = a * double.Parse(textBox1.Text);
+                    b = a * double.Parse(textBox1.Text);//умножение
                     textBox1.Text = b.ToString();
                     break;
                 case 4:
-                    b = a / double.Parse(textBox1.Text);
+                    b = a / double.Parse(textBox1.Text);//деление
                     textBox1.Text = b.ToString();
                     break;
                 case 5:
-                    b = Math.Sin(a);
+                    b = Math.Sin(a);//синус
                     textBox1.Text = b.ToString();
                     break;
                 case 6:
-                    b = Math.Cos(a);
+                    b = Math.Cos(a);//косинус
                     textBox1.Text = b.ToString();
                     break;
                 case 7:
-                    b = Math.Tan(a);
+                    b = Math.Tan(a);//тангенс
                     textBox1.Text = b.ToString();
                     break;
                 case 8:
-                    b = 1 / Math.Tan(a);
+                    b = 1 / Math.Tan(a);//котангенс
                     textBox1.Text = b.ToString();
                     break;
                 case 9:
-                    b = Math.Pow(a, 2);
+                    b = Math.Pow(a, 2);//возведение в квадрат
                     textBox1.Text = b.ToString();
                     break;
                 case 10:
-                    b = Math.Sqrt(a);
+                    b = Math.Sqrt(a);//квадратный корень
                     textBox1.Text = b.ToString();
                     break;
 
@@ -239,16 +236,22 @@ namespace pluxCalc
         {
             a = double.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 10;
-            label1.Text = a.ToString() + "Sqrt";
+            count = 9;
+            label1.Text = a.ToString() + "Squaring";
         }
 
         private void Binary_Click(object sender, EventArgs e)
         {
-            /*     int s = Convert.ToDouble(textBox1.Text);
-                   label1.Text = $"bin {s}";
-                   textBox1.Text = Convert.ToString(s, 2);
-                   label1.Text = "bin"; */
+          //  int i = Convert.ToInt32(textBox1.Text);
+            //textBox1.Text = Convert.ToString(i, 2);
+        }
+
+        private void squareroot_Click(object sender, EventArgs e)//квадратный корень
+        {
+            a = double.Parse(textBox1.Text);
+            textBox1.Clear();
+            count = 10;
+            label1.Text = a.ToString() + "Sqrt";
         }
     }
 }

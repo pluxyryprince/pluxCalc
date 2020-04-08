@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tab = new System.Windows.Forms.TabControl();
             this.Calculator = new System.Windows.Forms.TabPage();
             this.squareofnum = new System.Windows.Forms.Button();
@@ -174,6 +173,7 @@
             this.squareroot.TabIndex = 26;
             this.squareroot.Text = "Sqrt";
             this.squareroot.UseVisualStyleBackColor = true;
+            this.squareroot.Click += new System.EventHandler(this.squareroot_Click);
             // 
             // Tangens
             // 
@@ -514,7 +514,6 @@
             this.ClientSize = new System.Drawing.Size(450, 679);
             this.Controls.Add(this.tab);
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Gavrilin\'s calculator";
