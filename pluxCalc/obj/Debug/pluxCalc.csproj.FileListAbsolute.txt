@@ -1,0 +1,10 @@
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\obj\Debug\pluxCalc.csprojAssemblyReference.cache
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\obj\Debug\pluxCalc.Properties.Resources.resources
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\obj\Debug\pluxCalc.csproj.GenerateResource.cache
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\obj\Debug\pluxCalc.csproj.CoreCompileInputs.cache
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\bin\Debug\pluxCalc.exe.config
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\bin\Debug\pluxCalc.exe
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\bin\Debug\pluxCalc.pdb
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\obj\Debug\pluxCalc.exe
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\obj\Debug\pluxCalc.pdb
+C:\Users\adm1n_1337\Desktop\pluxCalc\pluxCalc\obj\Debug\pluxCalc.Form1.resources
