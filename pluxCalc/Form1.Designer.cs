@@ -59,9 +59,19 @@
             this.minus = new System.Windows.Forms.Button();
             this.plus = new System.Windows.Forms.Button();
             this.String = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.Convert = new System.Windows.Forms.TabPage();
+            this.length = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.upper = new System.Windows.Forms.CheckBox();
+            this.lower = new System.Windows.Forms.CheckBox();
+            this.stats = new System.Windows.Forms.CheckBox();
+            this.mistakesDebug = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tab.SuspendLayout();
             this.Calculator.SuspendLayout();
+            this.String.SuspendLayout();
+            this.Convert.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab
@@ -74,7 +84,7 @@
             this.tab.Margin = new System.Windows.Forms.Padding(4);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
-            this.tab.Size = new System.Drawing.Size(836, 876);
+            this.tab.Size = new System.Drawing.Size(461, 876);
             this.tab.TabIndex = 0;
             // 
             // Calculator
@@ -146,6 +156,7 @@
             this.Hexadecimal.TabIndex = 22;
             this.Hexadecimal.Text = "Hexad";
             this.Hexadecimal.UseVisualStyleBackColor = false;
+            this.Hexadecimal.Click += new System.EventHandler(this.Hexadecimal_Click);
             // 
             // Cotangens
             // 
@@ -228,6 +239,7 @@
             this.octopus.TabIndex = 21;
             this.octopus.Text = "Octo";
             this.octopus.UseVisualStyleBackColor = false;
+            this.octopus.Click += new System.EventHandler(this.octopus_Click);
             // 
             // Binary
             // 
@@ -487,25 +499,129 @@
             // String
             // 
             this.String.BackColor = System.Drawing.Color.Plum;
+            this.String.Controls.Add(this.mistakesDebug);
+            this.String.Controls.Add(this.lower);
+            this.String.Controls.Add(this.stats);
+            this.String.Controls.Add(this.upper);
+            this.String.Controls.Add(this.textBox3);
+            this.String.Controls.Add(this.length);
+            this.String.Controls.Add(this.textBox2);
             this.String.ForeColor = System.Drawing.SystemColors.ControlText;
             this.String.ImeMode = System.Windows.Forms.ImeMode.On;
             this.String.Location = new System.Drawing.Point(4, 30);
             this.String.Margin = new System.Windows.Forms.Padding(4);
             this.String.Name = "String";
             this.String.Padding = new System.Windows.Forms.Padding(4);
-            this.String.Size = new System.Drawing.Size(828, 842);
+            this.String.Size = new System.Drawing.Size(453, 842);
             this.String.TabIndex = 1;
             this.String.Text = "Строковый";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Plum;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(7, 7);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox2.Size = new System.Drawing.Size(441, 99);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Convert
             // 
             this.Convert.BackColor = System.Drawing.Color.Plum;
+            this.Convert.Controls.Add(this.comboBox1);
             this.Convert.Location = new System.Drawing.Point(4, 30);
             this.Convert.Margin = new System.Windows.Forms.Padding(4);
             this.Convert.Name = "Convert";
-            this.Convert.Size = new System.Drawing.Size(828, 842);
+            this.Convert.Size = new System.Drawing.Size(453, 842);
             this.Convert.TabIndex = 2;
-            this.Convert.Text = "Конверторы";
+            this.Convert.Text = "Конвертер";
+            this.Convert.Click += new System.EventHandler(this.Convert_Click);
+            // 
+            // length
+            // 
+            this.length.AutoSize = true;
+            this.length.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.length.Location = new System.Drawing.Point(7, 181);
+            this.length.Name = "length";
+            this.length.Size = new System.Drawing.Size(293, 27);
+            this.length.TabIndex = 1;
+            this.length.Text = "Определить длину строки";
+            this.length.UseVisualStyleBackColor = true;
+            this.length.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Plum;
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(7, 112);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox3.Size = new System.Drawing.Size(441, 63);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // upper
+            // 
+            this.upper.AutoSize = true;
+            this.upper.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.upper.Location = new System.Drawing.Point(7, 213);
+            this.upper.Name = "upper";
+            this.upper.Size = new System.Drawing.Size(428, 27);
+            this.upper.TabIndex = 3;
+            this.upper.Text = "Преобразование к верхнему регистру";
+            this.upper.UseVisualStyleBackColor = true;
+            this.upper.CheckedChanged += new System.EventHandler(this.upper_CheckedChanged);
+            // 
+            // lower
+            // 
+            this.lower.AutoSize = true;
+            this.lower.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lower.Location = new System.Drawing.Point(7, 245);
+            this.lower.Name = "lower";
+            this.lower.Size = new System.Drawing.Size(421, 27);
+            this.lower.TabIndex = 5;
+            this.lower.Text = "Преобразование к нижнему регистру";
+            this.lower.UseVisualStyleBackColor = true;
+            this.lower.CheckedChanged += new System.EventHandler(this.lower_CheckedChanged);
+            // 
+            // stats
+            // 
+            this.stats.AutoSize = true;
+            this.stats.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stats.Location = new System.Drawing.Point(7, 277);
+            this.stats.Name = "stats";
+            this.stats.Size = new System.Drawing.Size(147, 27);
+            this.stats.TabIndex = 4;
+            this.stats.Text = "Статистика";
+            this.stats.UseVisualStyleBackColor = true;
+            this.stats.CheckedChanged += new System.EventHandler(this.stats_CheckedChanged);
+            // 
+            // mistakesDebug
+            // 
+            this.mistakesDebug.AutoSize = true;
+            this.mistakesDebug.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mistakesDebug.Location = new System.Drawing.Point(7, 309);
+            this.mistakesDebug.Name = "mistakesDebug";
+            this.mistakesDebug.Size = new System.Drawing.Size(348, 27);
+            this.mistakesDebug.TabIndex = 7;
+            this.mistakesDebug.Text = " Исправление ошибок в тексте";
+            this.mistakesDebug.UseVisualStyleBackColor = true;
+            this.mistakesDebug.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Plum;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(447, 29);
+            this.comboBox1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -522,6 +638,9 @@
             this.tab.ResumeLayout(false);
             this.Calculator.ResumeLayout(false);
             this.Calculator.PerformLayout();
+            this.String.ResumeLayout(false);
+            this.String.PerformLayout();
+            this.Convert.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -559,6 +678,14 @@
         private System.Windows.Forms.Button Binary;
         private System.Windows.Forms.Button squareofnum;
         private System.Windows.Forms.Button Cotangens;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox length;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.CheckBox lower;
+        private System.Windows.Forms.CheckBox stats;
+        private System.Windows.Forms.CheckBox upper;
+        private System.Windows.Forms.CheckBox mistakesDebug;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

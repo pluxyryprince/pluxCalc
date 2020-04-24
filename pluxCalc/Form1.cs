@@ -240,11 +240,13 @@ namespace pluxCalc
             label1.Text = a.ToString() + "Squaring";
         }
 
-        private void Binary_Click(object sender, EventArgs e)
+        private void Binary_Click(object sender, EventArgs e) //кнопка перевода в двоичную систему счисления
         {
-          //  int i = Convert.ToInt32(textBox1.Text);
-            //textBox1.Text = Convert.ToString(i, 2);
-        }
+            int i = int.Parse(textBox1.Text);
+            label1.Text = $"bin{i}";
+            //textBox1.Text = Convert.ToString(i,2);
+            label1.Text = textBox1.Text;
+        } 
 
         private void squareroot_Click(object sender, EventArgs e)//квадратный корень
         {
@@ -252,6 +254,104 @@ namespace pluxCalc
             textBox1.Clear();
             count = 10;
             label1.Text = a.ToString() + "Sqrt";
+        }
+
+        private void octopus_Click(object sender, EventArgs e)//конпка перевода в восьмеричную систему счисления
+        {
+            int i = int.Parse(textBox1.Text);
+            label1.Text = $"bin{i}";
+            //textBox1.Text = Convert.ToString(i,8);
+            label1.Text = textBox1.Text;
+        }
+
+        private void Hexadecimal_Click(object sender, EventArgs e)//кнопка перевода в шестнадцатеричную систему счисления
+        {
+            int i = int.Parse(textBox1.Text);
+            label1.Text = $"bin{i}";
+            //textBox1.Text = Convert.ToString(i,16);
+            label1.Text = textBox1.Text;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)//чекбокс "определить длину строки"
+        {
+            string l = textBox2.Text.Length.ToString();
+            textBox3.Text = $"Длина строки: {l}";
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void upper_CheckedChanged(object sender, EventArgs e)//верхний регистр
+        {
+            string up = textBox2.Text.ToUpper();
+            textBox3.Text = $"{up}";
+        }
+
+        private void lower_CheckedChanged(object sender, EventArgs e)//нижний регистр
+        {
+            string low = textBox2.Text.ToLower();
+            textBox3.Text = $"{low}";
+        }
+
+        private void stats_CheckedChanged(object sender, EventArgs e)//статистика
+        {
+            int count = 0;
+            //подсчет цифр
+            foreach (char ch in textBox2.Text)
+            {
+                if (Char.IsDigit(ch))
+                    count++;
+            }
+            //подсчет гласных и согласных
+            string gl = "уеыаоэяиёюУЕЫАОЭЯИЁЮaeiouAEIOU";
+            string sogl = "цкнгшщзхфвпрлджчсмтбЦКНГШЩЗХФВПРЛДЖЧСМТБbcdfghjklmnpqrstvwxyzBCDFGHJKLMNQRSTVWXYZ";
+            int i = 0, j = 0;
+            //общее кол-во
+            textBox2.Text.ToCharArray().All(z =>
+            {
+                if (gl.ToCharArray().Contains(z)) i++;
+                else if
+            (sogl.ToCharArray().Contains(z)) j++; return true;
+            });
+            //вывод
+            textBox3.Text = $"Кол-во строк: { ((string[])textBox2.Lines).Length.ToString()} \n" +
+                $"Кол-во слов: { textBox2.Text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Length } \n" +
+                $"Кол-во цифр: {count} \n" +
+                $"Кол-во ласных: {i} \n" +
+                $"Кол-во согласных: {j}";
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)//исправление ошибок в тексте
+        {
+            string text = textBox2.Text;
+            string[] trues = new string[] { "жи", "ши", "ча", "ща", "чу", "щу" };
+            string[] errors = new string[] { "жы", "шы", "чя", "щя", "чю", "щю" };
+            for (int i = 0; i < textBox2.Text.Length; i++)//перебираем введенные данные
+            {
+                for (int j = 0; j < errors.Length; j++) //перебираем ошибки
+                {
+                    if (textBox2.Text.Contains(errors[j])) //проверка на наличие ошибок
+                        text = textBox2.Text.Replace(errors[j], trues[j]); //если они есть, заменяем их
+                    textBox3.Text = text;
+                }
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Convert_Click(object sender, EventArgs e)//конвертер
+        {
+
         }
     }
 }
