@@ -40,8 +40,6 @@
             this.Sinus = new System.Windows.Forms.Button();
             this.octopus = new System.Windows.Forms.Button();
             this.Binary = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.delete = new System.Windows.Forms.Button();
             this.zero = new System.Windows.Forms.Button();
             this.ravno = new System.Windows.Forms.Button();
@@ -58,15 +56,17 @@
             this.umnozhenie = new System.Windows.Forms.Button();
             this.minus = new System.Windows.Forms.Button();
             this.plus = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.String = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Convert = new System.Windows.Forms.TabPage();
-            this.length = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.upper = new System.Windows.Forms.CheckBox();
+            this.mistakesDebug = new System.Windows.Forms.CheckBox();
             this.lower = new System.Windows.Forms.CheckBox();
             this.stats = new System.Windows.Forms.CheckBox();
-            this.mistakesDebug = new System.Windows.Forms.CheckBox();
+            this.upper = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.length = new System.Windows.Forms.CheckBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Convert = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tab.SuspendLayout();
             this.Calculator.SuspendLayout();
@@ -99,8 +99,6 @@
             this.Calculator.Controls.Add(this.Sinus);
             this.Calculator.Controls.Add(this.octopus);
             this.Calculator.Controls.Add(this.Binary);
-            this.Calculator.Controls.Add(this.textBox1);
-            this.Calculator.Controls.Add(this.label1);
             this.Calculator.Controls.Add(this.delete);
             this.Calculator.Controls.Add(this.zero);
             this.Calculator.Controls.Add(this.ravno);
@@ -117,12 +115,14 @@
             this.Calculator.Controls.Add(this.umnozhenie);
             this.Calculator.Controls.Add(this.minus);
             this.Calculator.Controls.Add(this.plus);
+            this.Calculator.Controls.Add(this.label1);
+            this.Calculator.Controls.Add(this.textBox1);
             this.Calculator.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Calculator.Location = new System.Drawing.Point(4, 30);
             this.Calculator.Margin = new System.Windows.Forms.Padding(4);
             this.Calculator.Name = "Calculator";
             this.Calculator.Padding = new System.Windows.Forms.Padding(4);
-            this.Calculator.Size = new System.Drawing.Size(828, 842);
+            this.Calculator.Size = new System.Drawing.Size(453, 842);
             this.Calculator.TabIndex = 0;
             this.Calculator.Text = "Основной";
             this.Calculator.Click += new System.EventHandler(this.Calculator_Click);
@@ -255,29 +255,6 @@
             this.Binary.Text = "Binary";
             this.Binary.UseVisualStyleBackColor = false;
             this.Binary.Click += new System.EventHandler(this.Binary_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Plum;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(10, 16);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 69);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(13, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(429, 50);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // delete
             // 
@@ -496,6 +473,32 @@
             this.plus.UseVisualStyleBackColor = false;
             this.plus.Click += new System.EventHandler(this.plus_Click);
             // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(184, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 43);
+            this.label1.TabIndex = 17;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox1.Location = new System.Drawing.Point(10, 7);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(433, 63);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // String
             // 
             this.String.BackColor = System.Drawing.Color.Plum;
@@ -515,6 +518,78 @@
             this.String.Size = new System.Drawing.Size(453, 842);
             this.String.TabIndex = 1;
             this.String.Text = "Строковый";
+            // 
+            // mistakesDebug
+            // 
+            this.mistakesDebug.AutoSize = true;
+            this.mistakesDebug.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mistakesDebug.Location = new System.Drawing.Point(7, 309);
+            this.mistakesDebug.Name = "mistakesDebug";
+            this.mistakesDebug.Size = new System.Drawing.Size(348, 27);
+            this.mistakesDebug.TabIndex = 7;
+            this.mistakesDebug.Text = " Исправление ошибок в тексте";
+            this.mistakesDebug.UseVisualStyleBackColor = true;
+            this.mistakesDebug.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // lower
+            // 
+            this.lower.AutoSize = true;
+            this.lower.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lower.Location = new System.Drawing.Point(7, 245);
+            this.lower.Name = "lower";
+            this.lower.Size = new System.Drawing.Size(421, 27);
+            this.lower.TabIndex = 5;
+            this.lower.Text = "Преобразование к нижнему регистру";
+            this.lower.UseVisualStyleBackColor = true;
+            this.lower.CheckedChanged += new System.EventHandler(this.lower_CheckedChanged);
+            // 
+            // stats
+            // 
+            this.stats.AutoSize = true;
+            this.stats.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stats.Location = new System.Drawing.Point(7, 277);
+            this.stats.Name = "stats";
+            this.stats.Size = new System.Drawing.Size(147, 27);
+            this.stats.TabIndex = 4;
+            this.stats.Text = "Статистика";
+            this.stats.UseVisualStyleBackColor = true;
+            this.stats.CheckedChanged += new System.EventHandler(this.stats_CheckedChanged);
+            // 
+            // upper
+            // 
+            this.upper.AutoSize = true;
+            this.upper.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.upper.Location = new System.Drawing.Point(7, 213);
+            this.upper.Name = "upper";
+            this.upper.Size = new System.Drawing.Size(428, 27);
+            this.upper.TabIndex = 3;
+            this.upper.Text = "Преобразование к верхнему регистру";
+            this.upper.UseVisualStyleBackColor = true;
+            this.upper.CheckedChanged += new System.EventHandler(this.upper_CheckedChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Plum;
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(7, 112);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox3.Size = new System.Drawing.Size(441, 63);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // length
+            // 
+            this.length.AutoSize = true;
+            this.length.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.length.Location = new System.Drawing.Point(7, 181);
+            this.length.Name = "length";
+            this.length.Size = new System.Drawing.Size(293, 27);
+            this.length.TabIndex = 1;
+            this.length.Text = "Определить длину строки";
+            this.length.UseVisualStyleBackColor = true;
+            this.length.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox2
             // 
@@ -541,78 +616,6 @@
             this.Convert.Text = "Конвертер";
             this.Convert.Click += new System.EventHandler(this.Convert_Click);
             // 
-            // length
-            // 
-            this.length.AutoSize = true;
-            this.length.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.length.Location = new System.Drawing.Point(7, 181);
-            this.length.Name = "length";
-            this.length.Size = new System.Drawing.Size(293, 27);
-            this.length.TabIndex = 1;
-            this.length.Text = "Определить длину строки";
-            this.length.UseVisualStyleBackColor = true;
-            this.length.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.Plum;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(7, 112);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox3.Size = new System.Drawing.Size(441, 63);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // upper
-            // 
-            this.upper.AutoSize = true;
-            this.upper.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.upper.Location = new System.Drawing.Point(7, 213);
-            this.upper.Name = "upper";
-            this.upper.Size = new System.Drawing.Size(428, 27);
-            this.upper.TabIndex = 3;
-            this.upper.Text = "Преобразование к верхнему регистру";
-            this.upper.UseVisualStyleBackColor = true;
-            this.upper.CheckedChanged += new System.EventHandler(this.upper_CheckedChanged);
-            // 
-            // lower
-            // 
-            this.lower.AutoSize = true;
-            this.lower.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lower.Location = new System.Drawing.Point(7, 245);
-            this.lower.Name = "lower";
-            this.lower.Size = new System.Drawing.Size(421, 27);
-            this.lower.TabIndex = 5;
-            this.lower.Text = "Преобразование к нижнему регистру";
-            this.lower.UseVisualStyleBackColor = true;
-            this.lower.CheckedChanged += new System.EventHandler(this.lower_CheckedChanged);
-            // 
-            // stats
-            // 
-            this.stats.AutoSize = true;
-            this.stats.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.stats.Location = new System.Drawing.Point(7, 277);
-            this.stats.Name = "stats";
-            this.stats.Size = new System.Drawing.Size(147, 27);
-            this.stats.TabIndex = 4;
-            this.stats.Text = "Статистика";
-            this.stats.UseVisualStyleBackColor = true;
-            this.stats.CheckedChanged += new System.EventHandler(this.stats_CheckedChanged);
-            // 
-            // mistakesDebug
-            // 
-            this.mistakesDebug.AutoSize = true;
-            this.mistakesDebug.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mistakesDebug.Location = new System.Drawing.Point(7, 309);
-            this.mistakesDebug.Name = "mistakesDebug";
-            this.mistakesDebug.Size = new System.Drawing.Size(348, 27);
-            this.mistakesDebug.TabIndex = 7;
-            this.mistakesDebug.Text = " Исправление ошибок в тексте";
-            this.mistakesDebug.UseVisualStyleBackColor = true;
-            this.mistakesDebug.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Plum;
@@ -622,6 +625,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(447, 29);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -667,7 +671,6 @@
         private System.Windows.Forms.Button four;
         private System.Windows.Forms.Button three;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button squareroot;
         private System.Windows.Forms.Button Tangens;
@@ -686,6 +689,7 @@
         private System.Windows.Forms.CheckBox upper;
         private System.Windows.Forms.CheckBox mistakesDebug;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
