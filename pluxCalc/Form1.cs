@@ -127,24 +127,6 @@ namespace pluxCalc
         }
 
 
-        /*   public void Except(string box1)
-            {
-                try
-                {
-                    double i = Convert.ToDouble(box1);
-                    box1 = Convert.ToString(i);
-                }
-                catch (FormatException)
-                {
-                    MessageBox.Show("Введено нечисловое значение!", "Ошибка");// исключение на ввод букв
-                }
-                finally
-                {
-                    label1.Text = "Нажмите С, чтобы стереть.";
-                }
-            }
-            */
-
         private void calculate() //метод калькулятор
         {
             switch (count)
@@ -240,12 +222,9 @@ namespace pluxCalc
             label1.Text = a.ToString() + "Squaring";
         }
 
-        private void Binary_Click(object sender, EventArgs e) //кнопка перевода в двоичную систему счисления
+        private void Binary_Click(object sender, EventArgs e) //кнопка запятой
         {
-            int i = int.Parse(textBox1.Text);
-            label1.Text = $"bin{i}";
-            //textBox1.Text = Convert.ToString(i,2);
-            label1.Text = textBox1.Text;
+            textBox1.Text = textBox1.Text + ",";
         } 
 
         private void squareroot_Click(object sender, EventArgs e)//квадратный корень
@@ -260,7 +239,7 @@ namespace pluxCalc
         {
             int i = int.Parse(textBox1.Text);
             label1.Text = $"bin{i}";
-            //textBox1.Text = Convert.ToString(i,8);
+            //textBox1.Text = Convert.ToInt32(i,8);
             label1.Text = textBox1.Text;
         }
 
@@ -268,7 +247,7 @@ namespace pluxCalc
         {
             int i = int.Parse(textBox1.Text);
             label1.Text = $"bin{i}";
-            //textBox1.Text = Convert.ToString(i,16);
+            //textBox1.Text.ToString(i,16);
             label1.Text = textBox1.Text;
         }
 
@@ -355,6 +334,22 @@ namespace pluxCalc
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultClick_Click(object sender, EventArgs e)//кнопка вывода результата
+        {
+            double size = double.Parse(textBox5.Text);
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }

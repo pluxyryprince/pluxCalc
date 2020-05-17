@@ -32,14 +32,12 @@
             this.tab = new System.Windows.Forms.TabControl();
             this.Calculator = new System.Windows.Forms.TabPage();
             this.squareofnum = new System.Windows.Forms.Button();
-            this.Hexadecimal = new System.Windows.Forms.Button();
             this.Cotangens = new System.Windows.Forms.Button();
             this.squareroot = new System.Windows.Forms.Button();
             this.Tangens = new System.Windows.Forms.Button();
             this.Cosinus = new System.Windows.Forms.Button();
             this.Sinus = new System.Windows.Forms.Button();
-            this.octopus = new System.Windows.Forms.Button();
-            this.Binary = new System.Windows.Forms.Button();
+            this.comma = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.zero = new System.Windows.Forms.Button();
             this.ravno = new System.Windows.Forms.Button();
@@ -67,7 +65,17 @@
             this.length = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Convert = new System.Windows.Forms.TabPage();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.resultClick = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.startCountry = new System.Windows.Forms.ComboBox();
             this.tab.SuspendLayout();
             this.Calculator.SuspendLayout();
             this.String.SuspendLayout();
@@ -91,14 +99,12 @@
             // 
             this.Calculator.BackColor = System.Drawing.Color.Plum;
             this.Calculator.Controls.Add(this.squareofnum);
-            this.Calculator.Controls.Add(this.Hexadecimal);
             this.Calculator.Controls.Add(this.Cotangens);
             this.Calculator.Controls.Add(this.squareroot);
             this.Calculator.Controls.Add(this.Tangens);
             this.Calculator.Controls.Add(this.Cosinus);
             this.Calculator.Controls.Add(this.Sinus);
-            this.Calculator.Controls.Add(this.octopus);
-            this.Calculator.Controls.Add(this.Binary);
+            this.Calculator.Controls.Add(this.comma);
             this.Calculator.Controls.Add(this.delete);
             this.Calculator.Controls.Add(this.zero);
             this.Calculator.Controls.Add(this.ravno);
@@ -142,21 +148,6 @@
             this.squareofnum.Text = "x^2";
             this.squareofnum.UseVisualStyleBackColor = false;
             this.squareofnum.Click += new System.EventHandler(this.squareofnum_Click);
-            // 
-            // Hexadecimal
-            // 
-            this.Hexadecimal.BackColor = System.Drawing.Color.Plum;
-            this.Hexadecimal.Cursor = System.Windows.Forms.Cursors.No;
-            this.Hexadecimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Hexadecimal.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.Hexadecimal.Location = new System.Drawing.Point(362, 573);
-            this.Hexadecimal.Margin = new System.Windows.Forms.Padding(4);
-            this.Hexadecimal.Name = "Hexadecimal";
-            this.Hexadecimal.Size = new System.Drawing.Size(81, 66);
-            this.Hexadecimal.TabIndex = 22;
-            this.Hexadecimal.Text = "Hexad";
-            this.Hexadecimal.UseVisualStyleBackColor = false;
-            this.Hexadecimal.Click += new System.EventHandler(this.Hexadecimal_Click);
             // 
             // Cotangens
             // 
@@ -226,44 +217,29 @@
             this.Sinus.UseVisualStyleBackColor = true;
             this.Sinus.Click += new System.EventHandler(this.Sinus_Click);
             // 
-            // octopus
+            // comma
             // 
-            this.octopus.BackColor = System.Drawing.Color.Plum;
-            this.octopus.Cursor = System.Windows.Forms.Cursors.No;
-            this.octopus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.octopus.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.octopus.Location = new System.Drawing.Point(361, 499);
-            this.octopus.Margin = new System.Windows.Forms.Padding(4);
-            this.octopus.Name = "octopus";
-            this.octopus.Size = new System.Drawing.Size(82, 67);
-            this.octopus.TabIndex = 21;
-            this.octopus.Text = "Octo";
-            this.octopus.UseVisualStyleBackColor = false;
-            this.octopus.Click += new System.EventHandler(this.octopus_Click);
-            // 
-            // Binary
-            // 
-            this.Binary.BackColor = System.Drawing.Color.Plum;
-            this.Binary.Cursor = System.Windows.Forms.Cursors.No;
-            this.Binary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Binary.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.Binary.Location = new System.Drawing.Point(361, 426);
-            this.Binary.Margin = new System.Windows.Forms.Padding(4);
-            this.Binary.Name = "Binary";
-            this.Binary.Size = new System.Drawing.Size(81, 67);
-            this.Binary.TabIndex = 20;
-            this.Binary.Text = "Binary";
-            this.Binary.UseVisualStyleBackColor = false;
-            this.Binary.Click += new System.EventHandler(this.Binary_Click);
+            this.comma.BackColor = System.Drawing.Color.Plum;
+            this.comma.Cursor = System.Windows.Forms.Cursors.No;
+            this.comma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comma.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.comma.Location = new System.Drawing.Point(10, 572);
+            this.comma.Margin = new System.Windows.Forms.Padding(4);
+            this.comma.Name = "comma";
+            this.comma.Size = new System.Drawing.Size(81, 67);
+            this.comma.TabIndex = 20;
+            this.comma.Text = ",";
+            this.comma.UseVisualStyleBackColor = false;
+            this.comma.Click += new System.EventHandler(this.Binary_Click);
             // 
             // delete
             // 
             this.delete.Cursor = System.Windows.Forms.Cursors.No;
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.delete.Location = new System.Drawing.Point(10, 572);
+            this.delete.Location = new System.Drawing.Point(358, 573);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(81, 69);
+            this.delete.Size = new System.Drawing.Size(81, 66);
             this.delete.TabIndex = 16;
             this.delete.Text = "Clear";
             this.delete.UseVisualStyleBackColor = true;
@@ -276,7 +252,7 @@
             this.zero.ForeColor = System.Drawing.SystemColors.ControlText;
             this.zero.Location = new System.Drawing.Point(97, 573);
             this.zero.Name = "zero";
-            this.zero.Size = new System.Drawing.Size(81, 67);
+            this.zero.Size = new System.Drawing.Size(81, 66);
             this.zero.TabIndex = 14;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = true;
@@ -289,7 +265,7 @@
             this.ravno.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ravno.Location = new System.Drawing.Point(184, 573);
             this.ravno.Name = "ravno";
-            this.ravno.Size = new System.Drawing.Size(81, 67);
+            this.ravno.Size = new System.Drawing.Size(81, 66);
             this.ravno.TabIndex = 13;
             this.ravno.Text = "=";
             this.ravno.UseVisualStyleBackColor = true;
@@ -421,7 +397,7 @@
             this.delenie.Location = new System.Drawing.Point(272, 573);
             this.delenie.Margin = new System.Windows.Forms.Padding(4);
             this.delenie.Name = "delenie";
-            this.delenie.Size = new System.Drawing.Size(81, 67);
+            this.delenie.Size = new System.Drawing.Size(81, 66);
             this.delenie.TabIndex = 3;
             this.delenie.Text = "/";
             this.delenie.UseVisualStyleBackColor = false;
@@ -607,7 +583,18 @@
             // Convert
             // 
             this.Convert.BackColor = System.Drawing.Color.Plum;
+            this.Convert.Controls.Add(this.checkBox3);
+            this.Convert.Controls.Add(this.checkBox2);
+            this.Convert.Controls.Add(this.checkBox1);
+            this.Convert.Controls.Add(this.resultClick);
+            this.Convert.Controls.Add(this.textBox5);
+            this.Convert.Controls.Add(this.label2);
+            this.Convert.Controls.Add(this.textBox7);
             this.Convert.Controls.Add(this.comboBox1);
+            this.Convert.Controls.Add(this.textBox6);
+            this.Convert.Controls.Add(this.textBox4);
+            this.Convert.Controls.Add(this.startCountry);
+            this.Convert.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Convert.Location = new System.Drawing.Point(4, 30);
             this.Convert.Margin = new System.Windows.Forms.Padding(4);
             this.Convert.Name = "Convert";
@@ -616,16 +603,158 @@
             this.Convert.Text = "Конвертер";
             this.Convert.Click += new System.EventHandler(this.Convert_Click);
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(369, 326);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(70, 26);
+            this.checkBox3.TabIndex = 29;
+            this.checkBox3.Text = "Дет.";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(191, 326);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(78, 26);
+            this.checkBox2.TabIndex = 28;
+            this.checkBox2.Text = "Жен.";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 326);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 26);
+            this.checkBox1.TabIndex = 27;
+            this.checkBox1.Text = "Муж.";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // resultClick
+            // 
+            this.resultClick.BackColor = System.Drawing.Color.Plum;
+            this.resultClick.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resultClick.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.resultClick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resultClick.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.resultClick.Location = new System.Drawing.Point(6, 385);
+            this.resultClick.Name = "resultClick";
+            this.resultClick.Size = new System.Drawing.Size(437, 54);
+            this.resultClick.TabIndex = 26;
+            this.resultClick.Text = "Перевести";
+            this.resultClick.UseVisualStyleBackColor = false;
+            this.resultClick.Click += new System.EventHandler(this.resultClick_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.Plum;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox5.Location = new System.Drawing.Point(196, 168);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(247, 33);
+            this.textBox5.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(191, 461);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 32);
+            this.label2.TabIndex = 24;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Plum;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox7.Location = new System.Drawing.Point(6, 465);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(144, 32);
+            this.textBox7.TabIndex = 23;
+            this.textBox7.Text = "Результат:";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Plum;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.comboBox1.Items.AddRange(new object[] {
+            "EUR",
+            "USA",
+            "RUS",
+            "UK"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 266);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(447, 29);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Size = new System.Drawing.Size(437, 35);
+            this.comboBox1.TabIndex = 22;
+            this.comboBox1.Tag = "";
+            this.comboBox1.Text = "Выберите конечную страну";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.Plum;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox6.Location = new System.Drawing.Point(6, 179);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(184, 41);
+            this.textBox6.TabIndex = 21;
+            this.textBox6.Text = "Введите размер:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Plum;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox4.Location = new System.Drawing.Point(-9, 14);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(466, 32);
+            this.textBox4.TabIndex = 19;
+            this.textBox4.Text = "Добро пожаловать в конвертер размеров обуви!";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // startCountry
+            // 
+            this.startCountry.BackColor = System.Drawing.Color.Plum;
+            this.startCountry.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.startCountry.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startCountry.FormattingEnabled = true;
+            this.startCountry.Items.AddRange(new object[] {
+            "EUR",
+            "USA",
+            "RUS",
+            "UK"});
+            this.startCountry.Location = new System.Drawing.Point(6, 83);
+            this.startCountry.Name = "startCountry";
+            this.startCountry.Size = new System.Drawing.Size(437, 35);
+            this.startCountry.TabIndex = 0;
+            this.startCountry.Tag = "";
+            this.startCountry.Text = "Выберите начальную страну";
+            this.startCountry.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -645,6 +774,7 @@
             this.String.ResumeLayout(false);
             this.String.PerformLayout();
             this.Convert.ResumeLayout(false);
+            this.Convert.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -676,9 +806,7 @@
         private System.Windows.Forms.Button Tangens;
         private System.Windows.Forms.Button Cosinus;
         private System.Windows.Forms.Button Sinus;
-        private System.Windows.Forms.Button Hexadecimal;
-        private System.Windows.Forms.Button octopus;
-        private System.Windows.Forms.Button Binary;
+        private System.Windows.Forms.Button comma;
         private System.Windows.Forms.Button squareofnum;
         private System.Windows.Forms.Button Cotangens;
         private System.Windows.Forms.TextBox textBox2;
@@ -688,8 +816,18 @@
         private System.Windows.Forms.CheckBox stats;
         private System.Windows.Forms.CheckBox upper;
         private System.Windows.Forms.CheckBox mistakesDebug;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox startCountry;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button resultClick;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
